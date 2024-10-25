@@ -1,0 +1,4 @@
+1. Preprocessing (interpret preprocessor directives, like #include)
+2. Compilation: For each translation unit (.cpp file), convert that
+	into an object (.o) file, which is made of machine code
+3. Linking: Links together all the object files into an executable

@@ -1,0 +1,7 @@
+Coupling: Is when you want to change one component of code, and that necessitates
+changing one or more other components of code
+
+Interface: The parts of a component that other components interact with.
+	Coupling ALWAYS occurs at interfaces
+
+Encapsulation: Co-locate data and behavior

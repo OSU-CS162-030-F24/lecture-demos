@@ -4,4 +4,13 @@ changing one or more other components of code
 Interface: The parts of a component that other components interact with.
 	Coupling ALWAYS occurs at interfaces
 
+Three things that we'll do with coupling:
+1. Reduce it
+2. Isolate it
+3. Intelligently move our coupling around such that the components of code
+	that are most likely to NEED to change are also subject to the LEAST
+	amount of coupling
+
 Encapsulation: Co-locate data and behavior
+
+Information hiding: Hiding information behind a public interface

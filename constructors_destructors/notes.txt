@@ -1,0 +1,12 @@
+Constructors: A special member function that's automatically called when
+	an object is declared. The purpose is to "set up" an object.
+Destructors: A special member function that's automatically called when
+	an object is freed / deleted. The purpose is to "tear down" an object.
+
+The big three:
+1. Destructors
+2. Copy constructors
+3. Assignment operator overloads (AOOs)
+
+The purpose of the big three are to manage dynamic memory (freeing it, and
+copying it)

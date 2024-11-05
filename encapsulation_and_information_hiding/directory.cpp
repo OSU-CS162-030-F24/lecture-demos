@@ -20,7 +20,7 @@ void print_directory(const directory& d) {
 		std::endl;
 	
 	for (int i = 0; i < d.n_people; i++) {
-		print_person(d.people[i]);
+		d.people[i].print();
 		std::cout << std::endl;
 	}
 }

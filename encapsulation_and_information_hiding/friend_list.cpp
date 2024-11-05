@@ -18,12 +18,12 @@ void delete_friend_list(friend_list& list) {
 
 void print_friend_list(const friend_list& list) {
 	std::cout << "Friends of ";
-	print_person(list.owner);
+	list.owner.print();
 	std::cout << ":" << std::endl;
 
 	for (int i = 0; i < list.n_friends; i++) {
 		std::cout << " - ";
-		print_person(list.friends[i]);
+		list.friends[i].print();
 		std::cout << std::endl;
 	}
 }

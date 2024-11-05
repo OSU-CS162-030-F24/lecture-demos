@@ -10,16 +10,23 @@
 #include "friend_list.hpp"
 
 int main() {
-	person john = create_person("John", "Legend", 27);
+	person john;
+	john.initialize("John", "Legend", 27);
 
-	person aditya = create_person("Aditya", "Prakash", 24);
+	person aditya;
+	aditya.initialize("Aditya", "Prakash", 24);
 
-	person muhammad = create_person("Muhammad", "Ali", 23);
+	person muhammad;
+	muhammad.initialize("Muhammad", "Ali", 23);
 
 	// John is friends with aditya and muhammad
 	friend_list list = create_friend_list(john, 2);
 	list.friends[0] = aditya;
 	list.friends[1] = muhammad;
+
+	std::cout << list.friends[0].get_first_name() << std::endl; // Aditya
+	john.set_first_name("Joe");
+	john.print();
 
 	print_friend_list(list); // A dependency
 

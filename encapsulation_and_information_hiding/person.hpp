@@ -11,13 +11,19 @@
 // Member functions "belong" to objects of a class. Member functions of a class
 // are allowed to access the other private members of said class
 class person {
+private:
 	std::string first_name;
 	std::string last_name;
 	int age = 0;
-
-	void print();
+public:
+	void print() const;
 
 	void initialize(const std::string& first_name, const std::string& last_name, int age);
+
+	// Accessors and mutators
+	// (Getters and setters)
+	std::string get_first_name() const;
+	void set_first_name(const std::string& first_name);
 };
  
 #endif

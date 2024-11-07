@@ -18,6 +18,8 @@ public:
 
 	college_course(const college_course& other);
 
+	college_course& operator=(const college_course& other);
+
 	// Destructors have NO return type and NO parameters
 	// A destructor's name MUST be the name of its class, prefixed with
 	// a tilde (~)

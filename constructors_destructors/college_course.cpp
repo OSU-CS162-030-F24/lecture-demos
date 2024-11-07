@@ -37,3 +37,24 @@ college_course::college_course(const college_course& other) {
 	}
 	this->class_president = other.class_president;
 }
+
+college_course& college_course::operator=(const college_course& other) {
+	if (this == &other) {
+		// End the function immediately / do nothing
+		return *this;
+	}
+
+	if (this->students != nullptr) {
+		delete [] this->students;
+	}
+
+	this->name = other.name;
+	this->num_students = other.num_students;
+	this->students = new student[this->num_students];
+	for (int i = 0; i < this->num_students; i++) {
+		this->students[i] = other.students[i];
+	}
+	this->class_president = other.class_president;
+
+	return *this;
+}

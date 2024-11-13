@@ -4,7 +4,10 @@
 #include <string>
 
 class pet {
-private:
+// Protected members can be accessed from two places:
+// 1. Member functions of the class in which they're declared
+// 2. Member functions of "descendents" of the class in which they're declared
+protected:
 	std::string name = "Spot";
 	const std::string species = "Dog";
 	const int year_born = 2020;

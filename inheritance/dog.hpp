@@ -14,7 +14,10 @@ class dog : public pet {
 private:
 	bool fixed;
 public:
-	dog(const std::string& name, int year_born);
+	dog(const std::string& name, int year_born, bool fixed);
+
+	// Override the print_info function:
+	void print_info() const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 // Abstract class
 class monster {
 protected:
-	int hp;
+	int hp = 1;
 public:
 	monster();
 	monster(int hp);

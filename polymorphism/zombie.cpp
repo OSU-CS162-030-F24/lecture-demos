@@ -11,3 +11,9 @@ void zombie::do_turn(player& p) {
 	std::cout << "Argh! I eat brains!" << std::endl;
 	p.take_damage(3);
 }
+
+monster* zombie::clone() {
+	zombie* z = new zombie;
+	z.hp = this->hp;
+	return z;
+}

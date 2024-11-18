@@ -8,6 +8,8 @@ public:
 	vampire();
 
 	void do_turn(player& p); // Override
+
+	monster* clone();
 };
 
 #endif

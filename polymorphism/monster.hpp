@@ -11,7 +11,12 @@ public:
 	monster();
 	monster(int hp);
 
-	void do_turn(player& p);
+	// Pure virtual function
+	virtual void do_turn(player& p) = 0;
+
+	virtual monster* clone() = 0;
+
+	virtual ~monster();
 };
 
 #endif

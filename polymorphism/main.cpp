@@ -9,6 +9,12 @@
 
 void do_turn(monster** monsters, int n_monsters, player& p) {
 	for (int i = 0; i < n_monsters; i++) {
+		// Our computer has to decide what function def.
+		// should be invoked by this function call.
+		// This is called function binds.
+		// By default, all function binding is done by
+		// your compiler! (At compile time!)
+		// (Static binding)
 		monsters[i]->do_turn(p);
 	}
 }
@@ -38,8 +44,10 @@ int main() {
 		std::cout << std::endl;
 	}
 
+	monster* new_monster = monsters[0]->clone();
+
 	for (int i = 0; i < n_monsters; i++) {
-		// delete monsters[i];
+		delete monsters[i];
 	}
 	delete [] monsters;
 }

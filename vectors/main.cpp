@@ -30,5 +30,6 @@ int main() {
 
 	my_numbers.clear();
 
-
+	std::cout << my_numbers.capacity() << std::endl;
+	my_numbers.reserve(1000);
 }

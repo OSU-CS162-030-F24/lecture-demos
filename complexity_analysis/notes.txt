@@ -1,0 +1,46 @@
+Complexity analysis: A way of analyzing / measuring the "complexities" of an
+algorithm
+
+Space complexity: A measure of how much space (memory) an algorithm takes
+
+Runtime complexity: A measure of how much time an algorithm takes
+
+Complexities are measures of rates of growth relative to some parameter
+
+Example: Problem is sorting an array of N elements
+
+Big O Notation (Big Theta Notation):
+
+for each element x in array of size N:
+	print x
+O(N) -> Linear runtime complexity
+
+Print out a multiplication table of size NxN 
+
+for each i from 1 to N:
+	for each j from 1 to N
+		print i * j
+
+Total number of elements is N * N.
+
+The above algorithm has a runtime complexity of O(N^2)
+O(N^2) -> quadratic runtime complexity
+
+How to do runtime complexity:
+1. Count the number of operations performed by the whole algorithm, relative
+	to N
+2. Reduce.
+2.a. If your big O notation has multiple terms in it, discard all of the
+	non-dominant terms
+
+	O(N + N^2 + N^3) = O(N^3)
+2.b. If your big O notation has coefficients, get rid of them!
+	
+	O(20N) = O(N)
+2.c. If your big O notation has a logarithm term in it, discard the base
+
+	O(log_2(N)) = O(log(N))
+2.d. If your big O notation has nothing but constants, simply rewrite it as
+	O(1) (constant complexity)
+
+	O(1025) = O(1)
